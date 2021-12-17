@@ -16,7 +16,7 @@ export function CategorySelect({ title, ...rest }: Props) {
             <Category>
                 {title}
             </Category>
-            <Icon name='chevron-down'/>
+            <Icon name='chevron-down' />
         </Container>
     );
 }
