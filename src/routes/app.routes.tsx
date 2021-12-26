@@ -4,7 +4,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { useTheme } from 'styled-components';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-const { Navigator, Screen } = createBottomTabNavigator();
+
+const { Navigator, Screen } =  createBottomTabNavigator();
 
 import { Dashboard } from '../screens/Dashboard'
 import { Register } from '../screens/Register'
@@ -13,6 +14,7 @@ export function AppRoutes() {
     const theme = useTheme();
     return (
         <Navigator
+            initialRouteName='Listagem'
             screenOptions={{
                 headerShown: false,
                 tabBarActiveTintColor: theme.colors.secondary,
