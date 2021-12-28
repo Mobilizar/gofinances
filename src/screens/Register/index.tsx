@@ -13,10 +13,10 @@ import uuid from 'react-native-uuid';
 import { useForm } from 'react-hook-form';
 import { useNavigation } from '@react-navigation/native'
 
-import { InputForm } from '../../components/form/InputForm';
-import { Button } from '../../components/form/Button';
-import { TransactionTypeButton } from '../../components/form/TransactionTypeButton';
-import { CategorySelectButton } from '../../components/form/CategorySelectButton';
+import { InputForm } from '../../components/Form/InputForm';
+import { Button } from '../../components/Form/Button';
+import { TransactionTypeButton } from '../../components/Form/TransactionTypeButton';
+import { CategorySelectButton } from '../../components/Form/CategorySelectButton';
 
 import { CategorySelect } from '../CategorySelect';
 
@@ -44,7 +44,7 @@ const schema = Yup.object({
         .number()
         .typeError('Informe um valor numérico')
         .positive('O valor não pode ser negativo')
-        .required('Preço é obrigatório')
+        .required('O valor é obrigatório')
 });
 
 export function Register() {
@@ -97,7 +97,6 @@ export function Register() {
 
         try {
             const dataKey = '@gofinances:transactions';
-
             const data = await AsyncStorage.getItem(dataKey);
             const currentData = data ? JSON.parse(data) : [];
 
